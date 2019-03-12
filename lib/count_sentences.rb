@@ -1,5 +1,3 @@
-require 'pry'
-
 class String
 
   def sentence?
@@ -15,10 +13,6 @@ class String
   end
 
   def count_sentences
-    #self.squeeze.split(/[!.?]/).count
-    self.split(/\.|\?|\!/).delete_if do
-      binding.pry
-      |w| w.size < 2
-    end
+    self.squeeze.split(/[!.?]/).count
   end
 end
